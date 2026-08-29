@@ -1,0 +1,5 @@
+Can't load /etc/samba/smb.conf - run testparm to debug it
+  .                                   D        0  Tue May 26 18:45:01 2026
+  ..                                  D        0  Sat May  9 11:42:27 2026
+
+		10459391 blocks of size 4096. 2422540 blocks available

@@ -1,0 +1,10 @@
+# default owner for everything
+*               @kvayne
+
+# deploy + reliquary paths need a devops review
+/deploy.sh      @dash
+/crownspire/reliquary.py  @dash
+/.github/       @dash
+
+# docs
+/docs/          @btoll

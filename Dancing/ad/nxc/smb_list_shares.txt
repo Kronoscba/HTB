@@ -1,0 +1,98 @@
+LOW PRIVILEGE MODULES
+ENUMERATION
+[*] enum_av                   Gathers information on all endpoint protection solutions installed on the the remote host(s) via LsarLookupNames (no privilege needed)
+[*] enum_ca                   Anonymously uses RPC endpoints to hunt for ADCS CAs
+[*] gpp_privileges            Extracts privileges assigned via GPOs and resolves SIDs via LDAP.
+[*] ioxidresolver             This module helps you to identify hosts that have additional active interfaces
+[*] ms17-010                  MS17-010 - EternalBlue - NOT TESTED OUTSIDE LAB ENVIRONMENT
+[*] nopac                     Check if the DC is vulnerable to CVE-2021-42278 and CVE-2021-42287 to impersonate DA from standard domain user
+[*] ntlm_reflection           Attempt to check if the OS is vulnerable to CVE-2025-33073 (NTLM Reflection attack)
+[*] petitpotam                [REMOVED] Module to check if the DC is vulnerable to PetitPotam, credit to @topotam
+[*] printerbug                [REMOVED] Module to check if the Target is vulnerable to PrinterBug. Set LISTENER IP for coercion.
+[*] printnightmare            Check if host vulnerable to printnightmare
+[*] remove-mic                Check if host vulnerable to CVE-2019-1040
+[*] sccm-recon6               Check if target is a Distribution point or Primary Site Server through winreg (RECON-6)
+[*] shadowcoerce              [REMOVED] Module to check if the target is vulnerable to ShadowCoerce, credit to @Shutdown and @topotam
+[*] smbghost                  Module to check for the SMB dialect 3.1.1 and compression capability of the host, which is an indicator for the SMBGhost vulnerability (CVE-2020-0796).
+[*] spooler                   Detect if print spooler is enabled or not
+[*] webdav                    Checks whether the WebClient service is running on the target
+[*] zerologon                 Module to check if the DC is vulnerable to Zerologon aka CVE-2020-1472
+CREDENTIAL_DUMPING
+[*] aws-credentials           Search for aws credentials files.
+[*] gpp_autologin             Searches the domain controller for registry.xml to find autologon information and returns the username and password.
+[*] gpp_password              Retrieves the plaintext password and other information for accounts pushed through Group Policy Preferences.
+[*] spider_plus               List files recursively and save a JSON share-file metadata to the 'OUTPUT_FOLDER'. See module options for finer configuration.
+PRIVILEGE_ESCALATION
+[*] add-computer              Adds or deletes a domain computer
+[*] backup_operator           Exploit user in backup operator group to dump NTDS @mpgn_x64
+[*] change-password           Change or reset user passwords via various protocols
+[*] coerce_plus               Module to check if the Target is vulnerable to any coerce vulns. Set LISTENER IP for coercion.
+[*] dfscoerce                 [REMOVED] Module to check if the DC is vulnerable to DFSCoerce, credit to @filip_dragovic/@Wh04m1001 and @topotam
+[*] drop-library-ms           Creates and uploads an arbitrary .library-ms on writable shares, leveraging CVE-2025-24054 for looting NTLMv2 hash
+[*] drop-sc                   Drop a searchConnector-ms file on each writable share
+[*] efsr_spray                [REMOVED] Tries to activate the EFSR service by creating a file with the encryption attribute on some available share.
+[*] scuffy                    Creates and dumps an arbitrary .scf file with the icon property containing a UNC path to the declared SMB server against all writeable shares
+[*] slinky                    Creates windows shortcuts with the icon attribute containing a URI to the specified  server (default SMB) in all shares with write permissions
+[*] timeroast                 Timeroasting exploits Windows NTP authentication to request password hashes of any computer or trust account
+
+HIGH PRIVILEGE MODULES (requires admin privs)
+ENUMERATION
+[*] bitlocker                 Enumerating BitLocker Status on target(s) If it is enabled or disabled.
+[*] enum_dns                  Uses WMI to dump DNS from an AD DNS Server
+[*] enum_interfaces           Retrieve the list of network interfaces info (Name, IP Address, Subnet Mask, Default Gateway) from remote Windows registry (formerly --interfaces)
+[*] get_netconnections        Uses WMI to query network connections.
+[*] hyperv-host               Performs a registry query on the VM to lookup its HyperV Host
+[*] install_elevated          Checks for AlwaysInstallElevated
+[*] keepass_discover          Search for KeePass-related files and process.
+[*] lockscreendoors           Detect Windows lock screen backdoors by checking FileDescriptions of accessibility binaries.
+[*] ntlmv1                    Detect if lmcompatibilitylevel on the target is set to lower than 3 (which means ntlmv1 is enabled)
+[*] presence                  Traces Domain and Enterprise Admin presence in the target over SMB
+[*] reg-query                 Performs a registry query on the machine
+[*] runasppl                  Check if the registry value RunAsPPL is set or not
+[*] test_connection           Pings a host
+[*] uac                       Checks UAC status
+[*] wcc                       Check various security configuration items on Windows machines
+CREDENTIAL_DUMPING
+[*] dpapi_hash                Remotely dump Dpapi hash based on masterkeys
+[*] eventlog_creds            Extracting Credentials From Windows Logs (Event ID: 4688 and SYSMON)
+[*] firefox                   [REMOVED] Dump credentials from Firefox
+[*] handlekatz                Get lsass dump using handlekatz64 and parse the result with pypykatz
+[*] iis                       Checks for credentials in IIS Application Pool configuration files using appcmd.exe
+[*] keepass_trigger           Set up a malicious KeePass trigger to export the database in cleartext.
+[*] lsassy                    Dump lsass and parse the result remotely with lsassy
+[*] masky                     Remotely dump domain user credentials via an ADCS and a KDC
+[*] mobaxterm                 Remotely dump MobaXterm credentials via RemoteRegistry or NTUSER.dat export
+[*] mremoteng                 Dump mRemoteNG Passwords in AppData and in Desktop / Documents folders (digging recursively in them)
+[*] msol                      Dump MSOL cleartext password and Entra ID credentials from the localDB on the Entra ID Connect Server
+[*] nanodump                  Get lsass dump using nanodump and parse the result with pypykatz
+[*] notepad                   Extracts content from Windows Notepad tab state binary files.
+[*] notepad++                 Extracts notepad++ unsaved files.
+[*] ntds-dump-raw             Extracting the ntds.dit, SAM, and SYSTEM files from DC by accessing the raw hard drive.
+[*] ntdsutil                  Dump NTDS with ntdsutil
+[*] powershell_history        Extracts PowerShell history for all users and looks for sensitive commands.
+[*] procdump                  Get lsass dump using procdump64 and parse the result with pypykatz
+[*] putty                     Query the registry for users who saved ssh private keys in PuTTY. Download the private keys if found.
+[*] rdcman                    Remotely dump Remote Desktop Connection Manager (sysinternals) credentials
+[*] recent_files              Extracts recently modified files
+[*] recyclebin                Lists and exports users' recycle bins
+[*] reg-winlogon              Collect autologon credential stored in the registry
+[*] security-questions        Gets security questions and answers for users on computer
+[*] snipped                   Downloads screenshots taken by the (new) Snipping Tool.
+[*] teams_localdb             Retrieves the cleartext ssoauthcookie from the local Microsoft Teams database, if teams is open we kill all Teams process
+[*] veeam                     Extracts credentials from local Veeam SQL Database
+[*] vnc                       Loot Passwords from VNC server and client configurations
+[*] wam                       Dump access token from Token Broker Cache. More info here https://blog.xpnsec.com/wam-bam/. Module by zblurx
+[*] wdigest                   Creates/Deletes the 'UseLogonCredential' registry key enabling WDigest cred dumping on Windows >= 8.1
+[*] wifi                      Get key of all wireless interfaces
+[*] winscp                    Looks for WinSCP.ini files in the registry and default locations and tries to extract credentials.
+PRIVILEGE_ESCALATION
+[*] empire_exec               Uses Empire's RESTful API to generate a launcher for the specified listener and executes it
+[*] hash_spider               Dump lsass recursively from a given hash using BH to find local admins
+[*] impersonate               List and impersonate tokens to run command as locally logged on users
+[*] met_inject                Downloads the Meterpreter stager and injects it into memory
+[*] pi                        Run command as logged on users via Process Injection
+[*] rdp                       Enables/Disables RDP
+[*] remote-uac                Enable or disable remote UAC
+[*] schtask_as                Remotely execute a scheduled task as a logged on user
+[*] shadowrdp                 Enables or disables shadow RDP
+[*] web_delivery              Kicks off a Metasploit Payload using the exploit/multi/script/web_delivery module

@@ -1,0 +1,4 @@
+INFO: BloodHound.py for BloodHound LEGACY (BloodHound 4.2 and 4.3)
+INFO: Found AD domain: checkpoint.htb
+ERROR: The specified domain controller 10.129.41.25 looks like an IP address, but requires a hostname (FQDN).
+Use the -ns flag to specify a DNS server IP if the hostname does not resolve on your default nameserver.

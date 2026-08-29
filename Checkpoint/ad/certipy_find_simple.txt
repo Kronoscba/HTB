@@ -1,0 +1,7 @@
+Certipy v5.1.0 - by Oliver Lyak (ly4k)
+
+[-] Got error: LDAP authentication refused because LDAP signing is required. Try one of these options:
+- Remove '-no-ldap-signing' to enable LDAP signing
+- Use '-ldap-scheme ldaps' to use TLS encryption
+- Use '-ldap-simple-auth' for SIMPLE bind authentication
+[-] Use -debug to print a stacktrace

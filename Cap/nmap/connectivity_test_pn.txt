@@ -1,0 +1,13 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-06-28 02:12 -0300
+Nmap scan report for 10.129.41.19
+Host is up.
+
+PORT     STATE    SERVICE    VERSION
+22/tcp   filtered ssh
+80/tcp   filtered http
+443/tcp  filtered https
+3000/tcp filtered ppp
+8080/tcp filtered http-proxy
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.98 seconds

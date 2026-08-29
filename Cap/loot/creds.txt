@@ -1,0 +1,4 @@
+FTP Credentials found in capture_0.pcap:
+User: nathan
+Pass: Buck3tH4TF0RM3!
+Source: FTP USER/PASS commands in PCAP capture

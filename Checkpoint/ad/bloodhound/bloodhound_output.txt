@@ -1,0 +1,48 @@
+INFO: BloodHound.py for BloodHound LEGACY (BloodHound 4.2 and 4.3)
+INFO: Found AD domain: checkpoint.htb
+INFO: Getting TGT for user
+WARNING: Failed to get Kerberos TGT. Falling back to NTLM authentication. Error: Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
+INFO: Connecting to LDAP server: DC01.checkpoint.htb
+INFO: Testing resolved hostname connectivity dead:beef::b10c:603a:18fe:9ee
+INFO: Trying LDAP connection to dead:beef::b10c:603a:18fe:9ee
+WARNING: LDAP Authentication is refused because LDAP signing is enabled. Trying to connect over LDAPS instead...
+Traceback (most recent call last):
+  File "/usr/bin/bloodhound-python", line 33, in <module>
+    sys.exit(load_entry_point('bloodhound==1.9.0', 'console_scripts', 'bloodhound-python')())
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/site-packages/bloodhound/__init__.py", line 347, in main
+    bloodhound.run(collect=collect,
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+                   num_workers=args.workers,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                   exclude_dcs=args.exclude_dcs,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   fileNamePrefix=args.outputprefix)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/bloodhound/__init__.py", line 78, in run
+    self.pdc.prefetch_info('objectprops' in collect, 'acl' in collect, cache_computers=do_computer_enum)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/bloodhound/ad/domain.py", line 620, in prefetch_info
+    self.get_objecttype()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/site-packages/bloodhound/ad/domain.py", line 303, in get_objecttype
+    self.ldap_connect()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/site-packages/bloodhound/ad/domain.py", line 114, in ldap_connect
+    ldap = self.ad.auth.getLDAPConnection(hostname=self.hostname, ip=ip,
+                                          baseDN=self.ad.baseDN, protocol=protocol)
+  File "/usr/lib/python3.14/site-packages/bloodhound/ad/authentication.py", line 176, in getLDAPConnection
+    return self.getLDAPConnection(hostname, ip, baseDN, 'ldaps')
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/bloodhound/ad/authentication.py", line 164, in getLDAPConnection
+    bound = conn.bind()
+  File "/usr/lib/python3.14/site-packages/ldap3/core/connection.py", line 589, in bind
+    self.open(read_server_info=False)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/ldap3/strategy/sync.py", line 57, in open
+    BaseStrategy.open(self, reset_usage, read_server_info)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/ldap3/strategy/base.py", line 146, in open
+    raise exception_history[0][0]
+ldap3.core.exceptions.LDAPSocketOpenError: socket ssl wrapping error: [Errno 104] Connection reset by peer

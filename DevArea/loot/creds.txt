@@ -1,0 +1,13 @@
+# SysWatch Credentials
+SYSWATCH_SECRET_KEY=f3ac48a6006a13a37ab8da0ab0f2a3200d8b3640431efe440788beaefa236725
+SYSWATCH_ADMIN_PASSWORD=SyswatchAdmin2026
+SYSWATCH_DB_PATH=/opt/syswatch/syswatch_gui/syswatch.db
+
+# Hoverfly Credentials
+HOVERFLY_USERNAME=admin
+HOVERFLY_PASSWORD=O7IJ27MyyXiU
+HOVERFLY_JWT=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIwOTQ3ODc3NTYsImlhdCI6MTc4Mzc0Nzc1Niwic3ViIjoiIiwidXNlcm5hbWUiOiJhZG1pbiJ9.m9nLab2ZaAzxn8HYfUEHEoxiq8ygXkwTZBXgsc2mUPQJGRAXA0uyytAAKnz--CHyTx7XcCca_HGhFiHUgLrCvw
+
+# Users found
+# admin:SyswatchAdmin2026 (syswatch web GUI)
+# dev_ryan (SSH, uid 1001)

@@ -1,0 +1,65 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/univ.py", line 238, in prettyIn
+    return int(value)
+ValueError: invalid literal for int() with base 10: '(objectClass=organizationalUnit)'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/namedval.py", line 140, in __getitem__
+    return self.__numbers[key]
+           ~~~~~~~~~~~~~~^^^^^
+KeyError: '(objectClass=organizationalUnit)'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/univ.py", line 242, in prettyIn
+    return self.namedValues[value]
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/namedval.py", line 143, in __getitem__
+    return self.__names[key]
+           ~~~~~~~~~~~~^^^^^
+KeyError: '(objectClass=organizationalUnit)'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/univ.py", line 2258, in __setitem__
+    self.setComponentByName(idx, value)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/univ.py", line 2424, in setComponentByName
+    return self.setComponentByPosition(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        idx, value, verifyConstraints, matchTags, matchConstraints
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/univ.py", line 2591, in setComponentByPosition
+    value = subComponentType.clone(value=value)
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/base.py", line 372, in clone
+    return self.__class__(value, **initializers)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/univ.py", line 105, in __init__
+    base.SimpleAsn1Type.__init__(self, value, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/base.py", line 266, in __init__
+    value = self.prettyIn(value)
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/univ.py", line 245, in prettyIn
+    raise error.PyAsn1Error(
+        'Can\'t coerce %r into integer: %s' % (value, exc)
+    )
+pyasn1.error.PyAsn1Error: Can't coerce '(objectClass=organizationalUnit)' into integer: '(objectClass=organizationalUnit)'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 10, in <module>
+    resp = ldapConn.search('DC=checkpoint,DC=htb', '(objectClass=organizationalUnit)', attributes=['cn','distinguishedName','nTSecurityDescriptor'], sizeLimit=50)
+  File "/usr/lib/python3.14/site-packages/impacket/ldap/ldap.py", line 501, in search
+    searchRequest['scope'] = scope
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/pyasn1/type/univ.py", line 2262, in __setitem__
+    raise KeyError(exc)
+KeyError: PyAsn1Error("Can't coerce '(objectClass=organizationalUnit)' into integer: '(objectClass=organizationalUnit)'")
+=== All OUs ===

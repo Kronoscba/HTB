@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/media/gabi/Data/CTF/HTB/Checkpoint/scripts/ldap_enum.py", line 5, in <module>
+    conn = ldap3.Connection(server, user='checkpoint.htb\\alex.turner', password='Checkpoint2024!', authentication=ldap3.NTLM, auto_bind=True)
+  File "/usr/lib/python3.14/site-packages/ldap3/core/connection.py", line 363, in __init__
+    self._do_auto_bind()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/site-packages/ldap3/core/connection.py", line 387, in _do_auto_bind
+    self.open(read_server_info=False)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/ldap3/strategy/sync.py", line 57, in open
+    BaseStrategy.open(self, reset_usage, read_server_info)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/ldap3/strategy/base.py", line 146, in open
+    raise exception_history[0][0]
+ldap3.core.exceptions.LDAPSocketOpenError: socket ssl wrapping error: [Errno 104] Connection reset by peer

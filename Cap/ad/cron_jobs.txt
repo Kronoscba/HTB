@@ -1,0 +1,68 @@
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+-rw-r--r-- 1 root root 1042 Feb 13  2020 /etc/crontab
+
+/etc/cron.d:
+total 20
+drwxr-xr-x  2 root root 4096 Jul 31  2020 .
+drwxr-xr-x 92 root root 4096 Jul 23  2021 ..
+-rw-r--r--  1 root root  102 Feb 13  2020 .placeholder
+-rw-r--r--  1 root root  201 Feb 14  2020 e2scrub_all
+-rw-r--r--  1 root root  190 Jul 31  2020 popularity-contest
+
+/etc/cron.daily:
+total 48
+drwxr-xr-x  2 root root 4096 May 31  2021 .
+drwxr-xr-x 92 root root 4096 Jul 23  2021 ..
+-rw-r--r--  1 root root  102 Feb 13  2020 .placeholder
+-rwxr-xr-x  1 root root  376 Dec  4  2019 apport
+-rwxr-xr-x  1 root root 1478 Apr  9  2020 apt-compat
+-rwxr-xr-x  1 root root  355 Dec 29  2017 bsdmainutils
+-rwxr-xr-x  1 root root 1187 Sep  5  2019 dpkg
+-rwxr-xr-x  1 root root  377 Jan 21  2019 logrotate
+-rwxr-xr-x  1 root root 1123 Feb 25  2020 man-db
+-rwxr-xr-x  1 root root 4574 Jul 18  2019 popularity-contest
+-rwxr-xr-x  1 root root  214 Apr  2  2020 update-notifier-common
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 Jul 31  2020 .
+drwxr-xr-x 92 root root 4096 Jul 23  2021 ..
+-rw-r--r--  1 root root  102 Feb 13  2020 .placeholder
+
+/etc/cron.monthly:
+total 12
+drwxr-xr-x  2 root root 4096 Jul 31  2020 .
+drwxr-xr-x 92 root root 4096 Jul 23  2021 ..
+-rw-r--r--  1 root root  102 Feb 13  2020 .placeholder
+
+/etc/cron.weekly:
+total 20
+drwxr-xr-x  2 root root 4096 May 23  2021 .
+drwxr-xr-x 92 root root 4096 Jul 23  2021 ..
+-rw-r--r--  1 root root  102 Feb 13  2020 .placeholder
+-rwxr-xr-x  1 root root  813 Feb 25  2020 man-db
+-rwxr-xr-x  1 root root  211 Apr  2  2020 update-notifier-common
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#

@@ -1,0 +1,15 @@
+Nmap 7.95 scan - Host: 10.129.55.18
+
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 9.6p1 Ubuntu
+80/tcp   open  http    Apache/2.4.58 (Ubuntu) - redirects to cctv.htb
+
+# Local services (from target):
+8554/tcp - RTSP (Motion)
+3306/tcp - MySQL
+8888/tcp - unknown (404)
+8765/tcp - MotionEye 0.43.1b4
+8881/tcp - unknown
+9081/tcp - Motion JPEG stream
+1935/tcp - RTMP
+7999/tcp - unknown

@@ -1,0 +1,6 @@
+usage: nxc [-h] [--version] [-t THREADS] [--timeout TIMEOUT]
+           [--jitter INTERVAL] [--no-progress] [--log LOG] [--verbose |
+           --debug] [-6] [--dns-server DNS_SERVER] [--dns-tcp]
+           [--dns-timeout DNS_TIMEOUT]
+           {wmi,winrm,vnc,ssh,rdp,nfs,ldap,ftp,smb,mssql} ...
+nxc: error: unrecognized arguments: -c whoami

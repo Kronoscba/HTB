@@ -1,0 +1,1 @@
+[-] Module TIMEROAST is not supported for protocol ldap

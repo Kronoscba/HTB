@@ -1,0 +1,1 @@
+[-] Module ENUM_IMPERSONATE is not supported for protocol ldap

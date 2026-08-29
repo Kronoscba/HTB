@@ -1,0 +1,57 @@
+SMB                      10.129.41.25    445    DC01             [*] Windows 11 / Server 2025 Build 26100 x64 (name:DC01) (domain:checkpoint.htb) (signing:True) (SMBv1:None)
+SMB                      10.129.41.25    445    DC01             [+] checkpoint.htb\alex.turner:Checkpoint2024!
+[10:09:39] ERROR    Exception while calling proto_flow() on    connection.py:187
+                    target 10.129.41.25: Authenticating                         
+                    account's machine account quota exceeded!                   
+                    ╭── Traceback (most recent call last) ───╮                  
+                    │ in hSamrCreateUser2InDomain:2590       │                  
+                    │                                        │                  
+                    │ in request:1436                        │                  
+                    ╰────────────────────────────────────────╯                  
+                    DCERPCSessionError: SAMR SessionError:                      
+                    code: 0xc00002e7 -                                          
+                    STATUS_DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED -                  
+                    Your computer could not be joined to the                    
+                    domain. You have exceeded the maximum                       
+                    number of computer accounts you are                         
+                    allowed to create in this domain. Contact                   
+                    your system administrator to have this                      
+                    limit reset or increased.                                   
+                                                                                
+                    During handling of the above exception,                     
+                    another exception occurred:                                 
+                                                                                
+                    ╭── Traceback (most recent call last) ───╮                  
+                    │ in __init__:177                        │                  
+                    │                                        │                  
+                    │ in proto_flow:258                      │                  
+                    │                                        │                  
+                    │ in call_modules:308                    │                  
+                    │                                        │                  
+                    │ /tmp/_MEIkqJL2k/nxc/modules/add-comput │                  
+                    │ er.py:75 in on_login                   │                  
+                    │                                        │                  
+                    │    72 │   │   self.__lmhash = connecti │                  
+                    │    73 │   │                            │                  
+                    │    74 │   │   # First try to add via S │                  
+                    │ ❱  75 │   │   self.do_samr_add()       │                  
+                    │    76 │   │                            │                  
+                    │    77 │   │   # If SAMR fails now try  │                  
+                    │    78 │   │   if not self.noLDAPRequir │                  
+                    │                                        │                  
+                    │ /tmp/_MEIkqJL2k/nxc/modules/add-comput │                  
+                    │ er.py:168 in do_samr_add               │                  
+                    │                                        │                  
+                    │   165 │   │   │   │   │   self.context │                  
+                    │       {self.__computerName} in domain  │                  
+                    │   166 │   │   │   │   │   return       │                  
+                    │   167 │   │   │   try:                 │                  
+                    │ ❱ 168 │   │   │   │   user_handle = sa │                  
+                    │   169 │   │   │   │   │   dce,         │                  
+                    │   170 │   │   │   │   │   domain_handl │                  
+                    │   171 │   │   │   │   │   self.__compu │                  
+                    │                                        │                  
+                    │ in hSamrCreateUser2InDomain:2595       │                  
+                    ╰────────────────────────────────────────╯                  
+                    Exception: Authenticating account's                         
+                    machine account quota exceeded!                             

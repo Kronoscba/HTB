@@ -1,0 +1,7 @@
+Can't load /etc/samba/smb.conf - run testparm to debug it
+cd \checkpoint.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\Machine\Microsoft\Windows\: NT_STATUS_OBJECT_NAME_NOT_FOUND
+  .                                   D        0  Sat May  9 05:39:17 2026
+  ..                                  D        0  Sat May  9 05:39:17 2026
+  checkpoint.htb                     Dr        0  Sat May  9 05:39:17 2026
+
+		10459391 blocks of size 4096. 2470791 blocks available

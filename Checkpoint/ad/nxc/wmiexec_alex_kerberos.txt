@@ -1,0 +1,6 @@
+Impacket v0.13.1 - Copyright Fortra, LLC and its affiliated companies 
+
+[-] CCache file is not found. Skipping...
+[*] SMBv3.0 dialect used
+[-] CCache file is not found. Skipping...
+[-] rpc_s_access_denied

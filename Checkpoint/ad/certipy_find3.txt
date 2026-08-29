@@ -1,0 +1,13 @@
+Certipy v5.1.0 - by Oliver Lyak (ly4k)
+
+[*] Finding certificate templates
+[*] Found 0 certificate templates
+[*] Finding certificate authorities
+[*] Found 0 certificate authorities
+[*] Found 0 enabled certificate templates
+[*] Finding issuance policies
+[*] Found 1 issuance policy
+[*] Found 0 OIDs linked to templates
+[*] Enumeration output:
+Certificate Authorities                 : [!] Could not find any CAs
+Certificate Templates                   : [!] Could not find any certificate templates

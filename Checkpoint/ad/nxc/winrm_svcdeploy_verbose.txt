@@ -1,0 +1,5 @@
+[02:48:25] INFO     Socket info: host=10.129.41.25,            connection.py:174
+                    hostname=10.129.41.25, kerberos=False,                      
+                    ipv6=False, link-local ipv6=False                           
+WINRM                    10.129.41.25    5985   DC01             [*] Windows 11 / Server 2025 Build 26100 (name:DC01) (domain:checkpoint.htb)
+WINRM                    10.129.41.25    5985   DC01             [-] checkpoint.htb\svc_deploy:SvcDeploy!

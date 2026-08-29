@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - SysWatch</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="login-container">
+    <div class="login-card">
+        <div class="login-title">Sign in to SysWatch</div>
+        <div style="display:flex; justify-content:center; margin-bottom:10px;">
+            <button class="mode-toggle" id="modeToggle">Toggle Theme</button>
+        </div>
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+        <form method="post" action="/login">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+            <div class="login-footer">Protected access required · SysWatch v{{ version }}</div>
+        </form>
+    </div>
+</div>
+<script>
+const k='syswatch-theme';
+const prefers=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+let t=localStorage.getItem(k)||prefers;
+document.documentElement.setAttribute('data-theme', t);
+const b=document.getElementById('modeToggle');
+if(b){
+  b.textContent=t==='dark'?'Light Mode':'Dark Mode';
+  b.onclick=function(){
+    t=t==='dark'?'light':'dark';
+    localStorage.setItem(k,t);
+    document.documentElement.setAttribute('data-theme', t);
+    b.textContent=t==='dark'?'Light Mode':'Dark Mode';
+  };
+}
+</script>
+</body>
+</html>

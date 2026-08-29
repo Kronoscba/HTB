@@ -1,0 +1,6 @@
+Can't load /etc/samba/smb.conf - run testparm to debug it
+  .                                   D        0  Mon Mar 29 06:08:24 2021
+  ..                                  D        0  Mon Mar 29 06:08:24 2021
+  worknotes.txt                       A       94  Fri Mar 26 08:00:37 2021
+
+		5114111 blocks of size 4096. 1734303 blocks available

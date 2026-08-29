@@ -1,0 +1,12 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-06-28 01:52 -0300
+Nmap scan report for 10.129.135.204
+Host is up (0.18s latency).
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   closed http
+443/tcp  closed https
+8080/tcp closed http-proxy
+8443/tcp closed https-alt
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.36 seconds

@@ -1,0 +1,10 @@
+{
+  "name": "ward-rite",
+  "realm": "ashmarch",
+  "revision": 2,
+  "sigils": [
+    { "id": "cinder", "order": 1, "binding": "ward" },
+    { "id": "salt", "order": 2, "binding": "oath" },
+    { "id": "iron", "order": 3, "binding": "seal" }
+  ]
+}

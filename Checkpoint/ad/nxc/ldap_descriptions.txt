@@ -1,0 +1,7 @@
+LDAP                     10.129.41.25    389    DC01             [*] Windows 11 / Server 2025 Build 26100 (name:DC01) (domain:checkpoint.htb) (signing:Enforced) (channel binding:No TLS cert)
+LDAP                     10.129.41.25    389    DC01             [+] checkpoint.htb\alex.turner:Checkpoint2024!
+GET-DESC...              10.129.41.25    389    DC01             [+] Found following users:
+GET-DESC...              10.129.41.25    389    DC01             User: Administrator description: Built-in account for administering the computer/domain
+GET-DESC...              10.129.41.25    389    DC01             User: Guest description: Built-in account for guest access to the computer/domain
+GET-DESC...              10.129.41.25    389    DC01             User: krbtgt description: Key Distribution Center Service Account
+GET-DESC...              10.129.41.25    389    DC01             User: svc_deploy description: Deployment service account

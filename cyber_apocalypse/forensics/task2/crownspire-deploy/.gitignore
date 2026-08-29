@@ -1,0 +1,9 @@
+build/
+dist/
+*.egg-info/
+*.log
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+*.creds

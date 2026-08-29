@@ -1,0 +1,19 @@
+Impacket v0.13.1 - Copyright Fortra, LLC and its affiliated companies 
+
+[-] User Administrator doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] Kerberos SessionError: KDC_ERR_ETYPE_NOSUPP(KDC has no support for encryption type)
+[-] Kerberos SessionError: KDC_ERR_CLIENT_REVOKED(Clients credentials have been revoked)
+[-] User alex.turner doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User ryan.brooks doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User svc_deploy doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User james.harper doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User sarah.mitchell doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User emily.carter doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User david.reynolds doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User jessica.coleman doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User lauren.flores doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User michael.torres doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User kevin.patterson doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User brian.jenkins doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User megan.perry doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User max.palmer doesn't have UF_DONT_REQUIRE_PREAUTH set

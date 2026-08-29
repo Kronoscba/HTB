@@ -1,0 +1,6 @@
+usage: ldapdomaindump [-h] [-u USERNAME] [-p PASSWORD] [-at {NTLM,SIMPLE}]
+                      [-o DIRECTORY] [--no-html] [--no-json] [--no-grep]
+                      [--grouped-json] [-d DELIMITER] [-r] [-n DNS_SERVER]
+                      [-m]
+                      HOSTNAME
+ldapdomaindump: error: unrecognized arguments: --ssl

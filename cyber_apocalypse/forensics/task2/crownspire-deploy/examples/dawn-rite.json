@@ -1,0 +1,10 @@
+{
+  "name": "dawn-rite",
+  "realm": "crownspire",
+  "revision": 3,
+  "sigils": [
+    { "id": "ember", "order": 1, "binding": "oath" },
+    { "id": "brine", "order": 2, "binding": "seal" },
+    { "id": "ash", "order": 3, "binding": "ward" }
+  ]
+}

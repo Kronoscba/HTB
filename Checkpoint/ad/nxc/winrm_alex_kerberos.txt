@@ -1,0 +1,2 @@
+WINRM                    DC01.checkpoint.htb 5985   DC01             [*] Windows 11 / Server 2025 Build 26100 (name:DC01) (domain:checkpoint.htb)
+WINRM                    DC01.checkpoint.htb 5985   DC01             [-] Execute command failed, error: 'NoneType' object has no attribute 'execute_cmd'

@@ -1,0 +1,6 @@
+SMB                      10.129.41.25    445    DC01             [*] Windows 11 / Server 2025 Build 26100 x64 (name:DC01) (domain:checkpoint.htb) (signing:True) (SMBv1:None)
+SMB                      10.129.41.25    445    DC01             [+] checkpoint.htb\alex.turner:Checkpoint2024!
+SMB                      10.129.41.25    445    DC01             [+] Remote Registry enumerated sessions
+SMB                      10.129.41.25    445    DC01             USERNAME                SID
+SMB                      10.129.41.25    445    DC01             ======================= ===============================================
+SMB                      10.129.41.25    445    DC01             CHECKPOINT\ryan.brooks  S-1-5-21-3129162710-3498938529-1807524340-1103

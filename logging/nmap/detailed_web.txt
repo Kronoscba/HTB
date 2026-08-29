@@ -1,0 +1,31 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-19 01:25 -0300
+Nmap scan report for logging.htb (10.129.61.243)
+Host is up (0.18s latency).
+
+PORT     STATE SERVICE     VERSION
+80/tcp   open  http        Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows Server
+|_http-server-header: Microsoft-IIS/10.0
+8530/tcp open  http        Microsoft IIS httpd 10.0
+|_http-title: Site doesn't have a title.
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+8531/tcp open  ssl/unknown
+|_ssl-date: 2026-07-19T11:26:56+00:00; +7h00m00s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.logging.htb
+| Not valid before: 2026-04-24T15:49:07
+|_Not valid after:  2027-04-24T15:49:07
+| tls-alpn: 
+|   h2
+|_  http/1.1
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 6h59m59s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 85.39 seconds

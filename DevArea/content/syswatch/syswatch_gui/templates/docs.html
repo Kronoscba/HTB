@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SysWatch Docs</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="topbar">
+    <div class="brand">SysWatch</div>
+    <div class="user">
+        <span>{{ session.get('username') }}</span>
+        <button class="mode-toggle" id="modeToggle">Toggle Theme</button>
+        <a class="action" href="/">Dashboard</a>
+        <a class="logout" href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Introduction</h2>
+    <p>SysWatch provides server monitoring plugins and a secure web dashboard to view logs, check service status, refresh metrics, and back up or clean logs.</p>
+</div>
+
+<div class="card">
+    <h2>Features</h2>
+    <ul>
+        <li>Session-authenticated dashboard</li>
+        <li>CPU/Memory, Disk, Network, Log alerts, Service status</li>
+        <li>Per-section refresh to run plugins</li>
+        <li>Service status checks via systemd</li>
+        <li>Backup and cleanup of logs</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>CLI</h2>
+    <ul>
+        <li>Start web: syswatch.sh web</li>
+        <li>List plugins: syswatch.sh plugins</li>
+        <li>Run plugin: syswatch.sh plugin &lt;script&gt;</li>
+        <li>Help: syswatch.sh --help</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Configuration</h2>
+    <ul>
+        <li>SYSWATCH_SECRET_KEY</li>
+        <li>SYSWATCH_ADMIN_PASSWORD</li>
+        <li>SYSWATCH_LOG_DIR</li>
+        <li>SYSWATCH_PLUGIN_DIR</li>
+        <li>SYSWATCH_BACKUP_DIR</li>
+        <li>SYSWATCH_DB_PATH</li>
+        <li>SYSWATCH_VERSION</li>
+    </ul>
+</div>
+
+<div class="footer">SysWatch v{{ version }}</div>
+
+<script>
+const k='syswatch-theme';
+const prefers=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+let t=localStorage.getItem(k)||prefers;
+document.documentElement.setAttribute('data-theme', t);
+const b=document.getElementById('modeToggle');
+if(b){
+  b.textContent=t==='dark'?'Light Mode':'Dark Mode';
+  b.onclick=function(){
+    t=t==='dark'?'light':'dark';
+    localStorage.setItem(k,t);
+    document.documentElement.setAttribute('data-theme', t);
+    b.textContent=t==='dark'?'Light Mode':'Dark Mode';
+  };
+}
+</script>
+</body>
+</html>

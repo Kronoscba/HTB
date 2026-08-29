@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SysWatch Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="topbar">
+    <div class="brand">SysWatch Dashboard</div>
+    <div class="user">
+        <span>{{ session.get('username') }}</span>
+        <form method="post" action="/backup-logs" style="display:inline; margin-right:8px;">
+            <button class="backup" type="submit">Backup & Cleanup Logs</button>
+        </form>
+        <button class="mode-toggle" id="modeToggle">Toggle Theme</button>
+        <a class="docs" href="/docs" title="Docs">Docs</a>
+        <a class="logout" href="/logout">Logout</a>
+    </div>
+</div>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div class="card">
+    {% for m in messages %}
+        <div class="flash">{{ m }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
+
+{% for name, data in logs.items() %}
+<div class="card">
+    <h2>{{ name }}</h2>
+    <div class="log-box">
+        {% for line in data.lines %}
+            {% set cls = "line" %}
+            {% if "ALERT" in line or "FAIL" in line or "CRITICAL" in line or "FATAL" in line or "ERROR" in line %}
+                {% set cls = "alert" %}
+            {% elif "WARN" in line or "WARNING" in line %}
+                {% set cls = "warn" %}
+            {% endif %}
+            <pre class="{{ cls }}">{{ line }}</pre>
+        {% endfor %}
+    </div>
+    <a class="download" href="/download/{{ data.filename }}">Download Log</a>
+    <form method="post" action="/refresh/{{ name.replace(' ', '_') | lower }}" style="display:inline;">
+        <button class="action" type="submit">Refresh</button>
+    </form>
+    {% if name == 'Service Status' %}
+    <a class="action" href="/service-status">Check System Service Status</a>
+    {% endif %}
+    </div>
+{% endfor %}
+
+<div class="footer">SysWatch v{{ version }}</div>
+
+<script>
+const k='syswatch-theme';
+const prefers=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+let t=localStorage.getItem(k)||prefers;
+document.documentElement.setAttribute('data-theme', t);
+const b=document.getElementById('modeToggle');
+if(b){
+  b.textContent=t==='dark'?'Light Mode':'Dark Mode';
+  b.onclick=function(){
+    t=t==='dark'?'light':'dark';
+    localStorage.setItem(k,t);
+    document.documentElement.setAttribute('data-theme', t);
+    b.textContent=t==='dark'?'Light Mode':'Dark Mode';
+  };
+}
+</script>
+</body>
+</html>

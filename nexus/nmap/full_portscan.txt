@@ -1,0 +1,4 @@
+# Nmap 7.99 scan initiated Sun Jun 28 12:02:26 2026 as: nmap -p- --min-rate 1000 -T3 -oG nmap/full_portscan.txt 10.129.41.50
+Host: 10.129.41.50 (nexus.htb)	Status: Up
+Host: 10.129.41.50 (nexus.htb)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///	Ignored State: closed (65533)
+# Nmap done at Sun Jun 28 12:03:34 2026 -- 1 IP address (1 host up) scanned in 67.83 seconds

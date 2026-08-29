@@ -1,0 +1,1 @@
+[-] Module RECENT_FILES is not supported for protocol ldap

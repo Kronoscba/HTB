@@ -1,0 +1,1 @@
+http://10.129.41.19 [[32m200[0m] [[36mSecurity Dashboard[0m] [[35mBootstrap,Chart.js:2.7.2,Cloudflare,Highcharts,Modernizr,OWL Carousel,Popper,Python,cdnjs,gunicorn,jQuery:2.2.4,metisMenu[0m]

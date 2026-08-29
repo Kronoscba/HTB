@@ -1,0 +1,3 @@
+Impacket v0.13.1 - Copyright Fortra, LLC and its affiliated companies 
+
+[-] [Errno 2] No such file or directory: 'ad/users.txt'

@@ -1,0 +1,23 @@
+$486
+# Server
+redis_version:5.0.7
+redis_git_sha1:00000000
+redis_git_dirty:0
+redis_build_id:66bd629f924ac924
+redis_mode:standalone
+os:Linux 5.4.0-77-generic x86_64
+arch_bits:64
+multiplexing_api:epoll
+atomicvar_api:atomic-builtin
+gcc_version:9.3.0
+process_id:751
+run_id:ad5182df6a0a0d5a6006cc6bf87c11acaf2f0abf
+tcp_port:6379
+uptime_in_seconds:142
+uptime_in_days:0
+hz:10
+configured_hz:10
+lru_clock:4237793
+executable:/usr/bin/redis-server
+config_file:/etc/redis/redis.conf
+

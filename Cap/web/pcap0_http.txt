@@ -1,0 +1,6 @@
+GET	/	192.168.196.16		
+	/			
+GET	/static/main.css	192.168.196.16		
+	/static/main.css			
+GET	/favicon.ico	192.168.196.16		
+	/favicon.ico			

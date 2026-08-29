@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check System Service Status</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="topbar">
+    <div class="brand">SysWatch</div>
+    <div class="user">
+        <span>{{ session.get('username') }}</span>
+        <button class="mode-toggle" id="modeToggle">Toggle Theme</button>
+        <a class="logout" href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Check System Service Status</h2>
+    <form method="post" action="/service-status" id="svcForm" style="display:flex; gap:8px; align-items:center;">
+        <input type="text" id="serviceInput" name="service" placeholder="e.g. ssh" value="{{ service }}" required pattern="^[A-Za-z0-9_.-]{1,64}$" maxlength="64" autocomplete="off" spellcheck="false" style="flex:1; padding:8px; border-radius:4px; border:1px solid #333; background: var(--bg); color: var(--text);">
+        <button type="submit" id="submitBtn" class="download">Check</button>
+        <a href="/" class="action">Back to Dashboard</a>
+    </form>
+    <div id="clientError" class="error" style="display:none; margin-top:8px;">Allowed: letters, numbers, dot, dash, underscore</div>
+</div>
+
+{% if error %}
+<div class="card">
+    <div class="error">{{ error }}</div>
+</div>
+{% endif %}
+
+{% if output %}
+<div class="card">
+    <h3>Result</h3>
+    <div class="log-box"><pre>{{ output }}</pre></div>
+    <div style="margin-top:10px;"><a class="action" href="/service-status">Check Another Service</a></div>
+    <div style="margin-top:10px;"><a class="action" href="/">Back to Dashboard</a></div>
+    </div>
+{% endif %}
+
+</body>
+<script>
+const re = /^[A-Za-z0-9_.-]{1,64}$/;
+const input = document.getElementById('serviceInput');
+const form = document.getElementById('svcForm');
+const err = document.getElementById('clientError');
+const btn = document.getElementById('submitBtn');
+function validate() {
+  const v = input.value.trim();
+  const ok = re.test(v);
+  err.style.display = ok ? 'none' : 'block';
+  btn.disabled = !ok;
+  return ok;
+}
+input.addEventListener('input', validate);
+form.addEventListener('submit', function(e){ if(!validate()){ e.preventDefault(); }});
+</script>
+<script>
+const k='syswatch-theme';
+const prefers=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+let t=localStorage.getItem(k)||prefers;
+document.documentElement.setAttribute('data-theme', t);
+const b=document.getElementById('modeToggle');
+if(b){
+  b.textContent=t==='dark'?'Light Mode':'Dark Mode';
+  b.onclick=function(){
+    t=t==='dark'?'light':'dark';
+    localStorage.setItem(k,t);
+    document.documentElement.setAttribute('data-theme', t);
+    b.textContent=t==='dark'?'Light Mode':'Dark Mode';
+  };
+}
+</script>
+</html>

@@ -1,0 +1,2 @@
+Can't load /etc/samba/smb.conf - run testparm to debug it
+NT_STATUS_NO_SUCH_FILE listing \checkpoint.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\Machine\Microsoft\-R

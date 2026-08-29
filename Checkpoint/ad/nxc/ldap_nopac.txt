@@ -1,0 +1,1 @@
+[-] Module NOPAC is not supported for protocol ldap

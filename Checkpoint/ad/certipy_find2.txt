@@ -1,0 +1,14 @@
+Certipy v5.1.0 - by Oliver Lyak (ly4k)
+
+usage: certipy find [-h] [-text] [-stdout] [-json] [-csv] [-output prefix]
+                    [-enabled] [-dc-only] [-vulnerable] [-oids] [-hide-admins]
+                    [-sid object sid] [-dn distinguished name]
+                    [-dc-ip ip address] [-dc-host hostname]
+                    [-target-ip ip address] [-target dns/ip address]
+                    [-ns ip address] [-dns-tcp] [-timeout seconds]
+                    [-u username@domain] [-p password]
+                    [-hashes [lmhash:]nthash] [-k] [-aes hex key] [-no-pass]
+                    [-ldap-scheme ldap scheme] [-ldap-port port]
+                    [-no-ldap-channel-binding] [-no-ldap-signing]
+                    [-ldap-simple-auth] [-ldap-user-dn dn]
+certipy find: error: ambiguous option: -ldap could match -ldap-scheme, -ldap-port, -ldap-simple-auth, -ldap-user-dn

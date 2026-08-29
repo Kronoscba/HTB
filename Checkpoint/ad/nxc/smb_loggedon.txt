@@ -1,0 +1,3 @@
+SMB                      10.129.41.25    445    DC01             [*] Windows 11 / Server 2025 Build 26100 x64 (name:DC01) (domain:checkpoint.htb) (signing:True) (SMBv1:None)
+SMB                      10.129.41.25    445    DC01             [+] checkpoint.htb\alex.turner:Checkpoint2024!
+SMB                      10.129.41.25    445    DC01             [-] Error enumerating logged on users: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied

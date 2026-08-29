@@ -1,0 +1,3 @@
+SMB                      10.129.61.243   445    DC01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:logging.htb) (signing:True) (SMBv1:False) (Null Auth:True)
+SMB                      10.129.61.243   445    DC01             [+] logging.htb\wallace.everette:Welcome2026@ 
+SMB                      10.129.61.243   445    DC01             [*] Spidering .

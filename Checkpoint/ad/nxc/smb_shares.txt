@@ -1,0 +1,12 @@
+SMB                      10.129.41.25    445    DC01             [*] Windows 11 / Server 2025 Build 26100 x64 (name:DC01) (domain:checkpoint.htb) (signing:True) (SMBv1:None)
+SMB                      10.129.41.25    445    DC01             [+] checkpoint.htb\alex.turner:Checkpoint2024!
+SMB                      10.129.41.25    445    DC01             [*] Enumerated shares
+SMB                      10.129.41.25    445    DC01             Share           Permissions     Remark
+SMB                      10.129.41.25    445    DC01             -----           -----------     ------
+SMB                      10.129.41.25    445    DC01             ADMIN$                          Remote Admin
+SMB                      10.129.41.25    445    DC01             C$                              Default share
+SMB                      10.129.41.25    445    DC01             DevDrop         READ            VS Code extensions share for approved .vsix packages compatible with VS Code engine 1.118.0
+SMB                      10.129.41.25    445    DC01             IPC$            READ            Remote IPC
+SMB                      10.129.41.25    445    DC01             NETLOGON        READ            Logon server share
+SMB                      10.129.41.25    445    DC01             SYSVOL          READ            Logon server share
+SMB                      10.129.41.25    445    DC01             VMBackups      

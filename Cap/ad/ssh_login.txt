@@ -1,0 +1,7 @@
+Warning: Permanently added '10.129.41.19' (ED25519) to the list of known hosts.
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+nathan
+uid=1001(nathan) gid=1001(nathan) groups=1001(nathan)
+nathan:x:1001:1001::/home/nathan:/bin/bash

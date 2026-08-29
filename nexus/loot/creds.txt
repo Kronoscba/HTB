@@ -1,0 +1,6 @@
+=== Credenciales descubiertas ===
+DB MySQL: krayin:N27xh!!2ucY04
+IMAP: username1:password1
+Gitea users: admin, jones
+SSH users: j.matthew (from email)
+Krayin CRM: j.matthew@nexus.htb:N27xh!!2ucY04

@@ -1,0 +1,9 @@
+{
+  "name": "binding-rite",
+  "realm": "valyssar",
+  "revision": 7,
+  "sigils": [
+    { "id": "signet", "order": 1, "binding": "oath" },
+    { "id": "crown", "order": 2, "binding": "seal" }
+  ]
+}

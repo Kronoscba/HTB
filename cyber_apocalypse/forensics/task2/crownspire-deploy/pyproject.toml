@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crownspire-deploy"
+description = "Cinderbound tooling to sign and publish sigil manifests to the reliquary"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Kestra Vayne", email = "k.vayne@crownspire.valyssar" },
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "flake8>=6.0", "build>=1.0"]
+
+[project.scripts]
+crownspire = "crownspire.cli:main"
+
+[tool.setuptools]
+packages = ["crownspire"]
+
+[tool.setuptools.dynamic]
+version = { attr = "crownspire.__version__" }

@@ -1,0 +1,24 @@
+name: publish-manifests
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -e .
+      - name: publish signed manifests
+        env:
+          RELIQUARY_ENDPOINT: ${{ secrets.RELIQUARY_ENDPOINT }}
+          RELIQUARY_BUCKET: ${{ secrets.RELIQUARY_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.RELIQUARY_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.RELIQUARY_SECRET }}
+          WARDEN_SIGNING_KEY: ${{ secrets.WARDEN_SIGNING_KEY }}
+        run: |
+          make sign
+          ./deploy.sh prod

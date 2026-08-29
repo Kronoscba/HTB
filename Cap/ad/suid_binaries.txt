@@ -1,0 +1,46 @@
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+/usr/bin/umount
+/usr/bin/newgrp
+/usr/bin/pkexec
+/usr/bin/mount
+/usr/bin/gpasswd
+/usr/bin/passwd
+/usr/bin/chfn
+/usr/bin/sudo
+/usr/bin/at
+/usr/bin/chsh
+/usr/bin/su
+/usr/bin/fusermount
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/snapd/snap-confine
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/eject/dmcrypt-get-device
+/snap/snapd/11841/usr/lib/snapd/snap-confine
+/snap/snapd/12398/usr/lib/snapd/snap-confine
+/snap/core18/2066/bin/mount
+/snap/core18/2066/bin/ping
+/snap/core18/2066/bin/su
+/snap/core18/2066/bin/umount
+/snap/core18/2066/usr/bin/chfn
+/snap/core18/2066/usr/bin/chsh
+/snap/core18/2066/usr/bin/gpasswd
+/snap/core18/2066/usr/bin/newgrp
+/snap/core18/2066/usr/bin/passwd
+/snap/core18/2066/usr/bin/sudo
+/snap/core18/2066/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/snap/core18/2066/usr/lib/openssh/ssh-keysign
+/snap/core18/2074/bin/mount
+/snap/core18/2074/bin/ping
+/snap/core18/2074/bin/su
+/snap/core18/2074/bin/umount
+/snap/core18/2074/usr/bin/chfn
+/snap/core18/2074/usr/bin/chsh
+/snap/core18/2074/usr/bin/gpasswd
+/snap/core18/2074/usr/bin/newgrp
+/snap/core18/2074/usr/bin/passwd
+/snap/core18/2074/usr/bin/sudo
+/snap/core18/2074/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/snap/core18/2074/usr/lib/openssh/ssh-keysign
